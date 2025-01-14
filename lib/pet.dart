@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 class PetMain extends StatefulWidget {
+  const PetMain({super.key});
+
   @override
   _PetMainState createState() => _PetMainState();
 }
@@ -31,15 +33,15 @@ class _PetMainState extends State<PetMain> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: Text('-_- Take Care! ^-^'),
+        title: const Text('-_- Take Care! ^-^'),
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/menu_bg.png'),
             fit: BoxFit.cover,
@@ -66,14 +68,18 @@ class _PetMainState extends State<PetMain> {
                   _showConnectionImage ? 'assets/connection.png' :
 
 // ❤️ INSERT YOUR CHOSEN PET BUDDY HERE ❤️                  
-                   'assets/cat.png', 
+                   'assets/panda.png', 
 // Yes Right here! 
                    
                   height: _showConnectionImage ? 300 : 200, // Adjust the height as needed
                 ),
-                const SizedBox(height: 20),
-                IconButton(
-                  icon: Icon(Icons.favorite, color: Colors.red, size: 40),
+                if (!_showConnectionImage) const SizedBox(height: 20),
+                if (!_showConnectionImage) IconButton(
+
+// ❤️ YOU CAN ADJUST THE HEART BUTTON HERE ❤️                
+                  icon: const Icon(Icons.favorite, color: Colors.red, size: 40),
+// Yes Right here!
+
                   onPressed: _incrementPressCount,
                 ),
               ],

@@ -57,6 +57,7 @@ flutter:
   - assets/menu_bg.png
   - assets/logo.png
   - assets/connection.png
+  - assets/topname.png
 
 # Select your Pets here! 
   - assets/dog.png
@@ -68,6 +69,7 @@ flutter:
   - assets/panda.png
   - assets/hippopotamus.png
   - assets/connection.png
+  
 
   # To add assets to your application, add an assets section, like this:
   # assets:

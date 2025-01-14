@@ -10,11 +10,11 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: Text(title),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.transparent,
+      //   elevation: 0,
+      //   title: Image.asset('assets/topname.png'),
+      // ),
       extendBodyBehindAppBar: true,
       body: Stack(
         children: [
@@ -106,7 +106,7 @@ class MyHomePage extends StatelessWidget {
 }
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: MyHomePage(title: 'My Pet Buddy'),
   ));
