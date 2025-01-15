@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_pet_buddy/pet.dart';
-import 'package:my_pet_buddy/pets_preview.dart';
+import 'package:my_pet_buddy/pet_adoption_page.dart';
+import 'package:my_pet_buddy/pet_selection_page.dart';
 
 class MyHomePage extends StatelessWidget {
   final String title;
@@ -10,15 +10,13 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.transparent,
-      //   elevation: 0,
-      //   title: Image.asset('assets/topname.png'),
-      // ),
+    
       extendBodyBehindAppBar: true,
       body: Stack(
         children: [
           Container(
+
+// Background image of the menu screen
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/menu_bg.png'),
@@ -26,6 +24,8 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ),
+          
+// Box container for the logo and buttons
           Center(
             child: Container(
               width: 500,
@@ -35,6 +35,8 @@ class MyHomePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(color: Colors.black, width: 2),
               ),
+ 
+ // Logo of the app             
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -45,6 +47,8 @@ class MyHomePage extends StatelessWidget {
                       height: 200,
                     ),
                     const SizedBox(height: 20),
+                    
+ // ❤️ Adopt Now Button and its functionality ❤️                   
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -66,10 +70,13 @@ class MyHomePage extends StatelessWidget {
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
-                        ),
+                        ), 
                       ),
                     ),
-                    const SizedBox(height: 20), // Add some space between the buttons
+                      
+                    const SizedBox(height: 20), 
+                    
+ // ❤️  Meet the Pets Button and its functionality ❤️                  
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
